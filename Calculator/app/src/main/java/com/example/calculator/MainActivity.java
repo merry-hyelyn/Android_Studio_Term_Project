@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()){
             case R.id.clear:
                 display.setText("0");
+                show = "";
                 isNum1= false;
                 isNum2 = false;
                 break;
@@ -103,12 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.result:
-                if(isNum1 && isNum2){
-                    show = Double.toString(result);
-                    display.setText(show);
-                }
-                isNum1 = false;
-                isNum2 = false;
+                isOperator = true;
                 break;
         }
 
@@ -131,33 +127,33 @@ public class MainActivity extends AppCompatActivity {
                 switch(operator){
                     case "+":
                         result = n1 + n2;
-                        num1 = Double.toString(result);
                         isNum2 = false;
                         break;
                     case "-":
                         result = n1 - n2;
-                        num1 = Double.toString(result);
                         isNum2 = false;
                         break;
 
                     case "*":
                         result = n1 * n2;
-                        num1 = Double.toString(result);
                         isNum2 = false;
                         break;
 
                     case "/":
                         result = n1 / n2;
-                        num1 = Double.toString(result);
                         isNum2 = false;
                         break;
 
                     case "%":
                         result = n1 % n2;
-                        num1 = Double.toString(result);
                         isNum2 = false;
                         break;
             }
+                isOperator = false;
+                num1 = Double.toString(result);
+                show = Double.toString(result);
+                display.setText(show);
+                show = "";
 
         }
     }
