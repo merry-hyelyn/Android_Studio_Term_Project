@@ -204,7 +204,7 @@
             android:textSize="30dp" />
 
         <Button
-            android:id="@+id/plus"
+            android:id="@+id/add"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginLeft="13dp"
@@ -222,7 +222,7 @@
 
         <Button
             android:id="@+id/btn0"
-            android:layout_width="185dp"
+            android:layout_width="192dp"
             android:layout_height="90dp"
             android:layout_marginLeft="12dp"
             android:background="@drawable/button_num"
